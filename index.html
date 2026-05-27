@@ -13,7 +13,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-...
+
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
@@ -210,6 +210,11 @@
                         <span id="adr-text-ru" class="lang-block">Ереван, проспект Маршала Баграмяна, 77</span>
                         <span id="adr-text-en" class="lang-block">77 Marshal Baghramyan Ave, Yerevan</span>
                     </p>
+                    <p>🕒 <strong id="c-time-hy">Աշխատանքային ժամեր:</strong><strong id="c-time-ru" class="lang-block">График работы:</strong><strong id="c-time-en" class="lang-block">Working Hours:</strong> 
+                        <span id="time-text-hy">Ամեն օր` 09:00 - 21:00</span>
+                        <span id="time-text-ru" class="lang-block">Каждый день: 09:00 - 21:00</span>
+                        <span id="time-text-en" class="lang-block">Every day: 09:00 - 21:00</span>
+                    </p>
                     <p>📞 <strong>Phone:</strong> <a href="tel:+3744858900" class="hover:text-[#6CB2A4] transition font-bold text-gray-900">+374 (44) 85-89-00</a></p>
                     <p>📲 <strong>WhatsApp:</strong> <a href="https://wa.me/37444858900" target="_blank" class="text-green-600 hover:underline font-bold transition">Написать нам в чат</a></p>
                 </div>
@@ -224,6 +229,45 @@
     <footer class="bg-[#F4F8F7] py-8 text-center text-xs text-gray-400 border-t border-gray-100">
         <p>© 2026 GevorgAni Dental Clinic. Բոլոր իրավունքները պաշտպանված են։</p>
     </footer>
+
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div onclick="closeModal()" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        
+        <div class="relative bg-white rounded-[2rem] w-full max-w-md p-6 sm:p-8 shadow-2xl border border-gray-100 transform transition-all scale-100 z-10">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition text-xl p-2 cursor-pointer">&times;</button>
+            
+            <div class="text-center space-y-2 mb-6">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F8F7] text-[#6CB2A4] text-xl font-bold mb-2">✦</div>
+                <h3 class="text-xl font-bold text-gray-900 lang-block lang-active" id="modal-title-hy">Ամրագրել այցելություն</h3>
+                <h3 class="text-xl font-bold text-gray-900 lang-block" id="modal-title-ru">Записаться на прием</h3>
+                <h3 class="text-xl font-bold text-gray-900 lang-block" id="modal-title-en">Book an Appointment</h3>
+                
+                <p class="text-sm text-gray-500 lang-block lang-active" id="modal-desc-hy">Ընտրեք Ձեզ հարմար տարբերակը կապ հաստատելու համար</p>
+                <p class="text-sm text-gray-500 lang-block" id="modal-desc-ru">Выберите удобный способ для связи с нами</p>
+                <p class="text-sm text-gray-500 lang-block" id="modal-desc-en">Choose a convenient way to contact us</p>
+            </div>
+            
+            <div class="space-y-3">
+                <a href="https://wa.me/37444858900" target="_blank" class="flex items-center justify-between p-4 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-gray-900 font-semibold rounded-2xl transition border border-[#25D366]/20 group">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white text-lg">📲</span>
+                        <span>WhatsApp</span>
+                    </div>
+                    <span class="text-gray-400 group-hover:translate-x-1 transition">→</span>
+                </a>
+                
+                <a href="https://tel:+37444858900" class="flex items-center justify-between p-4 bg-[#317682]/10 hover:bg-[#317682]/20 text-gray-900 font-semibold rounded-2xl transition border border-[#317682]/20 group">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-[#317682] flex items-center justify-center text-white text-sm">📞</span>
+                        <span id="modal-btn-call-hy" class="lang-block lang-active">Զանգահարել</span>
+                        <span id="modal-btn-call-ru" class="lang-block">Позвонить</span>
+                        <span id="modal-btn-call-en" class="lang-block">Call Us</span>
+                    </div>
+                    <span class="text-gray-400 group-hover:translate-x-1 transition">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Данные прайс-листа полностью соответствуют картинке
