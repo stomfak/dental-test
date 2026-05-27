@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GevorgAni Dental Clinic</title>
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GevorgAni Dental Clinic</title>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+...
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', 'Noto Sans Armenian', sans-serif; }
+        .lang-block { display: none; }
+        .lang-active { display: block; }
+    </style>
+</head>
+<body class="bg-[#F4F8F7] text-[#1E293B] antialiased scroll-smooth">
+
+    <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between sticky top-0 bg-[#F4F8F7]/90 backdrop-blur-md z-50">
+        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900">
+            <span class="text-[#6CB2A4]">✦</span> GevorgAni <span class="text-gray-400 font-light">Dental</span>
+        </div>
+        
+        <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-500">
+            <a href="#about" class="hover:text-[#6CB2A4] transition" data-lang="menu_main">Գլխավոր</a>
+            <a href="#doctors" class="hover:text-[#6CB2A4] transition" data-lang="menu_team">Բժիշկներ</a>
+            <a href="#price" class="hover:text-[#6CB2A4] transition" data-lang="menu_services">Գներ</a>
+            <a href="#licenses" class="hover:text-[#6CB2A4] transition" data-lang="menu_docs">Լիցենզիաներ</a>
+            <a href="#blog" class="hover:text-[#6CB2A4] transition" data-lang="menu_blog">Ինստագրամ</a>
+            <a href="#contacts" class="hover:text-[#6CB2A4] transition" data-lang="menu_contacts">Կապ</a>
+        </nav>
+
+        <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm border border-gray-200 text-xs font-bold">
+            <button onclick="setLanguage('hy')" id="btn-hy" class="text-white bg-[#6CB2A4] px-1.5 py-0.5 rounded-md cursor-pointer">AM</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="setLanguage('ru')" id="btn-ru" class="text-gray-400 px-1.5 py-0.5 rounded-md cursor-pointer">RU</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="setLanguage('en')" id="btn-en" class="text-gray-400 px-1.5 py-0.5 rounded-md cursor-pointer">EN</button>
+        </div>
+    </header>
+
+    <main id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 space-y-6 order-2 lg:order-1">
+                <div id="hero-hy" class="lang-block lang-active space-y-6">
+                    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.15]">Ժպիտի տրանսֆորմացիա ճշգրտությամբ</h1>
+                    <p class="text-gray-500 text-base leading-relaxed">Բարի գալուստ GevorgAni Dental կլինիկա։ Մենք կիրառում ենք ժամանակակից մեթոդներ և պրեմիում նյութեր Ձեր ատամների առողջությունն ապահովելու համար։</p>
+                </div>
+                <div id="hero-ru" class="lang-block space-y-6">
+                    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.15]">Трансформация улыбки с точностью</h1>
+                    <p class="text-gray-500 text-base leading-relaxed">Добро пожаловать в клинику GevorgAni Dental. Мы используем современные методы и премиальные материалы для здоровья ваших зубов.</p>
+                </div>
+                <div id="hero-en" class="lang-block space-y-6">
+                    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-[1.15]">Transforming Smiles with Precision</h1>
+                    <p class="text-gray-500 text-base leading-relaxed">Welcome to GevorgAni Dental Clinic. We combine advanced techniques and premium materials to ensure your perfect oral health.</p>
+                </div>
+
+                <div>
+                    <a href="https://wa.me/37444858900" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-medium text-white bg-[#6CB2A4] hover:bg-[#599A8D] rounded-full shadow-sm transition gap-2">
+                        <span id="btn-text-hy" class="lang-block lang-active">Ամրագրել այցելություն</span>
+                        <span id="btn-text-ru" class="lang-block">Записаться на прием</span>
+                        <span id="btn-text-en" class="lang-block">Book an Appointment</span>
+                        →
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 flex justify-center order-1 lg:order-2">
+                <div class="relative w-full max-w-[550px] aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl bg-white border-4 border-white">
+                    <img src="PHOTO-2026-05-26-17-16-58.jpg" alt="GevorgAni Dental" class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="doctors" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-gray-100">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900" id="title-doc-hy">Մեր Թիմը</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 lang-block" id="title-doc-ru">Наша Команда</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 lang-block" id="title-doc-en">Our Team</h2>
+            
+            <p class="text-gray-500 mt-4 text-base italic" id="sub-doc-hy">Ամուսին և կին, ովքեր թիմ են թե՛ կյանքում, թե՛ ստոմատոլոգիայում։</p>
+            <p class="text-gray-500 mt-4 text-base italic lang-block" id="sub-doc-ru">Муж и жена, которые стали командой как в жизни, так и в стоматологии.</p>
+            <p class="text-gray-500 mt-4 text-base italic lang-block" id="sub-doc-en">Husband and wife, a true team both in life and in dentistry.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center space-y-4">
+                <div class="w-44 h-44 rounded-full overflow-hidden bg-gray-100 border-4 border-[#F4F8F7]">
+                    <img src="gevorg.jpg" alt="Dr. Gevorg" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-gray-900">Գևորգ</h3>
+                    <p class="text-xs font-semibold text-[#6CB2A4] uppercase tracking-wider" id="spec-g-hy">Համահիմնադիր / Ավագ Ստոմատոլոգ</p>
+                    <p class="text-xs font-semibold text-[#6CB2A4] uppercase tracking-wider lang-block" id="spec-g-ru">Сооснователь / Старший Стоматолог</p>
+                    <p class="text-xs font-semibold text-[#6CB2A4] uppercase tracking-wider lang-block" id="spec-g-en">Co-founder / Senior Dentist</p>
+                    
+                    <p class="text-sm text-gray-500 max-w-xs pt-2" id="desc-g-hy">Մասնագիտացված է բարձր բարդության իմպլանտացիայի, վիրաբուժության և օրթոպեդիկ ստոմատոլոգիայի մեջ:</p>
+                    <p class="text-sm text-gray-500 max-w-xs pt-2 lang-block" id="desc-g-ru">Специализируется на сложной имплантации, хирургии и ортопедической стоматологии.</p>
+                    <p class="text-sm text-gray-500 max-w-xs pt-2 lang-block" id="desc-g-en">Specializes in advanced dental implantation, surgery, and orthopedic dentistry.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center space-y-4">
+                <div class="w-44 h-44 rounded-full overflow-hidden bg-gray-100 border-4 border-[#F4F8F7]">
+                    <img src="ani.jpg" alt="Dr. Ani" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-gray-900">Անի</h3>
+                    <p class="text-xs font-semibold text-[#6CB2A4] uppercase tracking-wider" id="spec-a-hy">Համահիմնադիր / Էսթետիկ Ստոմատոլոգ</p>
+                    <p class="text-xs font-semibold text-[#6CB2A4] uppercase tracking-wider lang-block" id="spec-a-ru">Сооснователь / Эстетический Стоматолог</p>
+                    <p class="text-xs font-semibold text-[#6CB2A4] uppercase tracking-wider lang-block" id="spec-a-en">Co-founder / Aesthetic Dentist</p>
+                    
+                    <p class="text-sm text-gray-500 max-w-xs pt-2" id="desc-a-hy">Ժպիտի էսթետիկ վերականգնման, բարձրակարգ վինիրների, թերապիայի և օրթոդոնտիայի փորձագետ։</p>
+                    <p class="text-sm text-gray-500 max-w-xs pt-2 lang-block" id="desc-a-ru">Эксперт в эстетической реставрации, установке виниров премиум-класса, терапии и ортодонтии.</p>
+                    <p class="text-sm text-gray-500 max-w-xs pt-2 lang-block" id="desc-a-en">Expert in aesthetic restoration, premium veneers, therapy, and orthodontics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="price" class="bg-white border-t border-gray-100 py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-900" id="title-p-hy">Ծառայություններ և Գներ</h2>
+                <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-p-ru">Услуги и Цены</h2>
+                <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-p-en">Services & Prices</h2>
+            </div>
+
+            <div class="bg-gradient-to-b from-[#E6F0EE] to-[#F4F8F7] rounded-[2rem] p-6 sm:p-10 shadow-sm border border-[#D5E5E2] space-y-4">
+                <div class="space-y-4" id="price-list-container">
+                    </div>
+                
+                <div class="pt-6 mt-4 border-t border-[#D5E5E2]">
+                    <div class="inline-block bg-[#6CB2A4] text-white text-xs font-bold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4 shadow-sm" id="ortho-title">
+                        ՕՐԹՈԴՈՆՏԻԱ
+                    </div>
+                    <div class="space-y-4" id="ortho-list-container">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="licenses" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-gray-100">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-gray-900" id="title-l-hy">Լիցենզիաներ և Սերտիֆիկատներ</h2>
+            <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-l-ru">Лицензии и Сертификаты</h2>
+            <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-l-en">Licenses & Certificates</h2>
+        </div>
+        <div class="flex justify-center">
+            <div class="bg-white p-4 rounded-3xl shadow-md border border-gray-100 max-w-xs hover:scale-105 transition duration-300">
+                <div class="rounded-2xl w-full aspect-[3/4] bg-gray-200 flex items-center justify-center text-gray-400 text-sm font-medium">License Photo</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="bg-white py-20 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-12 gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900" id="title-b-hy">Մենք Ինստագրամում</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 lang-block" id="title-b-ru">Мы в Instagram</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 lang-block" id="title-b-en">Follow Our Instagram</h2>
+                </div>
+                <a href="https://www.instagram.com/gevorgani_dental" target="_blank" class="bg-[#1E293B] text-white text-xs font-bold px-5 py-3 rounded-full hover:bg-gray-800 transition shadow-sm">@gevorgani_dental</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="https://www.instagram.com/gevorgani_dental" target="_blank" class="block aspect-[4/5] bg-white rounded-2xl overflow-hidden relative group border border-gray-100 shadow-sm">
+                    <img src="IMG_5624.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-102 transition duration-300">
+                </a>
+                <a href="https://www.instagram.com/gevorgani_dental" target="_blank" class="block aspect-[4/5] bg-white rounded-2xl overflow-hidden relative group border border-gray-100 shadow-sm">
+                    <img src="IMG_5623.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-102 transition duration-300">
+                </a>
+                <a href="https://www.instagram.com/gevorgani_dental" target="_blank" class="block aspect-[4/5] bg-white rounded-2xl overflow-hidden relative group border border-gray-100 shadow-sm">
+                    <img src="PHOTO-2026-05-26-17-16-58.jpg" alt="GevorgAni Team" class="w-full h-full object-cover group-hover:scale-102 transition duration-300">
+                </a>
+                <a href="https://www.instagram.com/gevorgani_dental" target="_blank" class="block aspect-[4/5] bg-white rounded-2xl overflow-hidden relative group border border-gray-100 shadow-sm">
+                    <img src="55437.jpg" alt="Price List Post" class="w-full h-full object-cover group-hover:scale-102 transition duration-300">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-gray-100">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-gray-900" id="title-c-hy">Կապվեք Մեզ Հետ</h2>
+                <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-c-ru">Как с нами связаться</h2>
+                <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-c-en">Contact Us</h2>
+                
+                <div class="space-y-4 text-base text-gray-600">
+                    <p>📍 <strong id="c-adr-hy">Հասցե:</strong><strong id="c-adr-ru" class="lang-block">Адрес:</strong><strong id="c-adr-en" class="lang-block">Address:</strong> 
+                        <span id="adr-text-hy">Երևան, Մարշալ Բաղրամյան պողոտա, 77 շենք</span>
+                        <span id="adr-text-ru" class="lang-block">Ереван, проспект Маршала Баграмяна, 77</span>
+                        <span id="adr-text-en" class="lang-block">77 Marshal Baghramyan Ave, Yerevan</span>
+                    </p>
+                    <p>📞 <strong>Phone:</strong> <a href="tel:+3744858900" class="hover:text-[#6CB2A4] transition font-bold text-gray-900">+374 (44) 85-89-00</a></p>
+                    <p>📲 <strong>WhatsApp:</strong> <a href="https://wa.me/37444858900" target="_blank" class="text-green-600 hover:underline font-bold transition">Написать нам в чат</a></p>
+                </div>
+            </div>
+            
+            <div class="w-full h-80 rounded-[2rem] overflow-hidden shadow-md border border-gray-100 bg-gray-200">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.784403378512!2d44.49622937661559!3d40.19163297147775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd1687ea83bb%3A0x67399fcb6bb291a1!2s77%20Marshal%20Baghramyan%20Ave%2C%20Yerevan!5e0!3m2!1sen!2sam!4v1716820000000!5m2!1sen!2sam" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#F4F8F7] py-8 text-center text-xs text-gray-400 border-t border-gray-100">
+        <p>© 2026 GevorgAni Dental Clinic. Բոլոր իրավունքները պաշտպանված են։</p>
+    </footer>
+
+    <script>
+        // Данные прайс-листа полностью соответствуют картинке
+        const prices = {
+            hy: [
+                { name: "Ատամնաքարերի մաքրում և սպիտակեցում", price: "20.000 - 35.000 ֏" },
+                { name: "Պլոմբավորում բարձրակարգ կոմպոզիտով (Լուսային)", price: "15.000 - 40.000 ֏" },
+                { name: "Արմատախողովակների բուժում / վերաբուժում (1 խող. համար)", price: "10.000 - 30.000 ֏" },
+                { name: "Ատամի հեռացում", price: "10.000 - 35.000 ֏" },
+                { name: "Շապիկներ", price: "45.000 - 120.000 ֏" },
+                { name: "Վինիրներ", price: "30.000 - 120.000 ֏" },
+                { name: "Պրոթեզներ", price: "65.000 - 300.000 ֏" },
+                { name: "Լուսային սպիտակեցում", price: "90.000 - 150.000 ֏" },
+                { name: "Իմպլանտացիա", price: "120.000 - 280.000 ֏" }
+            ],
+            ru: [
+                { name: "Чистка и отбеливание зубов", price: "20.000 - 35.000 ֏" },
+                { name: "Пломбирование качественным композитом (Световая)", price: "15.000 - 40.000 ֏" },
+                { name: "Лечение / перелечивание каналов (за 1 канал)", price: "10.000 - 30.000 ֏" },
+                { name: "Удаление зуба", price: "10.000 - 35.000 ֏" },
+                { name: "Коронки", price: "45.000 - 120.000 ֏" },
+                { name: "Виниры", price: "30.000 - 120.000 ֏" },
+                { name: "Протезы", price: "65.000 - 300.000 ֏" },
+                { name: "Световое отбеливание", price: "90.000 - 150.000 ֏" },
+                { name: "Имплантация", price: "120.000 - 280.000 ֏" }
+            ],
+            en: [
+                { name: "Dental Scaling and Whitening", price: "20.000 - 35.000 ֏" },
+                { name: "High-quality Composite Filling (Light-cured)", price: "15.000 - 40.000 ֏" },
+                { name: "Root Canal Treatment / Retreatment (per canal)", price: "10.000 - 30.000 ֏" },
+                { name: "Tooth Extraction", price: "10.000 - 35.000 ֏" },
+                { name: "Dental Crowns", price: "45.000 - 120.000 ֏" },
+                { name: "Porcelain Veneers", price: "30.000 - 120.000 ֏" },
+                { name: "Dentures", price: "65.000 - 300.000 ֏" },
+                { name: "Light-cured Whitening", price: "90.000 - 150.000 ֏" },
+                { name: "Dental Implants", price: "120.000 - 280.000 ֏" }
+            ]
+        };
+
+        const orthoPrices = {
+            hy: [
+                { name: "Բրեկետներ", price: "480.000 - 950.000 ֏" },
+                { name: "Կապաններ", price: "30.000 - 50.000 ֏" }
+            ],
+            ru: [
+                { name: "Брекеты", price: "480.000 - 950.000 ֏" },
+                { name: "Капы (ретейнеры)", price: "30.000 - 50.000 ֏" }
+            ],
+            en: [
+                { name: "Braces", price: "480.000 - 950.000 ֏" },
+                { name: "Retainers / Aligners", price: "30.000 - 50.000 ֏" }
+            ]
+        };
+
+        const orthoTitles = {
+            hy: "ՕՐԹՈԴՈՆՏԻԱ",
+            ru: "ОРТОДОНТИЯ",
+            en: "ORTHODONTICS"
+        };
+
+        const menuTranslations = {
+            hy: { main: "Գլխավոր", team: "Բժիշկներ", services: "Գներ", docs: "Լիցենզիաներ", blog: "Ինստագրամ", contacts: "Կապ" },
+            ru: { main: "Главная", team: "Команда", services: "Цены", docs: "Лицензии", blog: "Инстаграм", contacts: "Контакты" },
+            en: { main: "Home", team: "Team", services: "Prices", docs: "Licenses", blog: "Instagram", contacts: "Contact" }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-block').forEach(el => el.style.display = 'none');
+            
+            document.getElementById(`hero-${lang}`).style.display = 'block';
+            document.getElementById(`btn-text-${lang}`).style.display = 'block';
+            document.getElementById(`title-doc-${lang}`).style.display = 'block';
+            document.getElementById(`sub-doc-${lang}`).style.display = 'block';
+            document.getElementById(`spec-g-${lang}`).style.display = 'block';
+            document.getElementById(`desc-g-${lang}`).style.display = 'block';
+            document.getElementById(`spec-a-${lang}`).style.display = 'block';
+            document.getElementById(`desc-a-${lang}`).style.display = 'block';
+            document.getElementById(`title-p-${lang}`).style.display = 'block';
+            document.getElementById(`title-l-${lang}`).style.display = 'block';
+            document.getElementById(`title-b-${lang}`).style.display = 'block';
+            document.getElementById(`title-c-${lang}`).style.display = 'block';
+            
+            document.getElementById(`adr-text-${lang}`).style.display = 'inline';
+            document.getElementById(`c-adr-${lang}`).style.display = 'inline';
+            
+            // Обновляем заголовок ортодонтии
+            document.getElementById('ortho-title').textContent = orthoTitles[lang];
+
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang').replace('menu_', '');
+                el.textContent = menuTranslations[lang][key];
+            });
+
+            // Рендер основных цен
+            const container = document.getElementById('price-list-container');
+            container.innerHTML = '';
+            prices[lang].forEach(item => {
+                container.innerHTML += `
+                    <div class="flex justify-between items-center py-2 border-b border-[#D5E5E2]/60 gap-4">
+                        <span class="font-medium text-gray-800 text-sm sm:text-base">${item.name}</span>
+                        <span class="font-bold text-gray-900 whitespace-nowrap text-sm sm:text-base">${item.price}</span>
+                    </div>
+                `;
+            });
+
+            // Рендер цен ортодонтии
+            const orthoContainer = document.getElementById('ortho-list-container');
+            orthoContainer.innerHTML = '';
+            orthoPrices[lang].forEach(item => {
+                orthoContainer.innerHTML += `
+                    <div class="flex justify-between items-center py-2 border-b border-[#D5E5E2]/60 gap-4">
+                        <span class="font-medium text-gray-800 text-sm sm:text-base">${item.name}</span>
+                        <span class="font-bold text-gray-900 whitespace-nowrap text-sm sm:text-base">${item.price}</span>
+                    </div>
+                `;
+            });
+
+            ['hy', 'ru', 'en'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if(l === lang) {
+                    btn.className = "text-white bg-[#6CB2A4] px-1.5 py-0.5 rounded-md cursor-pointer";
+                } else {
+                    btn.className = "text-gray-400 px-1.5 py-0.5 rounded-md hover:text-gray-900 cursor-pointer";
+                }
+            });
+        }
+
+        setLanguage('hy');
+    </script>
+</body>
+</html>
