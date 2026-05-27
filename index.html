@@ -4,16 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GevorgAni Dental Clinic</title>
-
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GevorgAni Dental Clinic</title>
     
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
@@ -29,7 +21,7 @@
 </head>
 <body class="bg-[#F4F8F7] text-[#1E293B] antialiased scroll-smooth">
 
-    <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between sticky top-0 bg-[#F4F8F7]/90 backdrop-blur-md z-50">
+    <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between sticky top-0 bg-[#F4F8F7]/90 backdrop-blur-md z-40">
         <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900">
             <span class="text-[#6CB2A4]">✦</span> GevorgAni <span class="text-gray-400 font-light">Dental</span>
         </div>
@@ -70,12 +62,12 @@
                 </div>
 
                 <div>
-                    <a href="https://wa.me/37444858900" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-medium text-white bg-[#6CB2A4] hover:bg-[#599A8D] rounded-full shadow-sm transition gap-2">
+                    <button onclick="openModal()" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-medium text-white bg-[#6CB2A4] hover:bg-[#599A8D] rounded-full shadow-sm transition gap-2 cursor-pointer w-full sm:w-auto">
                         <span id="btn-text-hy" class="lang-block lang-active">Ամրագրել այցելություն</span>
                         <span id="btn-text-ru" class="lang-block">Записаться на прием</span>
                         <span id="btn-text-en" class="lang-block">Book an Appointment</span>
                         →
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -142,15 +134,13 @@
             </div>
 
             <div class="bg-gradient-to-b from-[#E6F0EE] to-[#F4F8F7] rounded-[2rem] p-6 sm:p-10 shadow-sm border border-[#D5E5E2] space-y-4">
-                <div class="space-y-4" id="price-list-container">
-                    </div>
+                <div class="space-y-4" id="price-list-container"></div>
                 
                 <div class="pt-6 mt-4 border-t border-[#D5E5E2]">
                     <div class="inline-block bg-[#6CB2A4] text-white text-xs font-bold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4 shadow-sm" id="ortho-title">
                         ՕՐԹՈԴՈՆՏԻԱ
                     </div>
-                    <div class="space-y-4" id="ortho-list-container">
-                        </div>
+                    <div class="space-y-4" id="ortho-list-container"></div>
                 </div>
             </div>
         </div>
@@ -162,9 +152,22 @@
             <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-l-ru">Лицензии и Сертификаты</h2>
             <h2 class="text-3xl font-bold text-gray-900 lang-block" id="title-l-en">Licenses & Certificates</h2>
         </div>
-        <div class="flex justify-center">
-            <div class="bg-white p-4 rounded-3xl shadow-md border border-gray-100 max-w-xs hover:scale-105 transition duration-300">
-                <div class="rounded-2xl w-full aspect-[3/4] bg-gray-200 flex items-center justify-center text-gray-400 text-sm font-medium">License Photo</div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div onclick="openLightbox('4496bba6-6283-456e-983b-a19cf2bb14a4.JPG')" class="bg-white p-3 rounded-2xl shadow-md border border-gray-100 hover:scale-102 transition duration-300 cursor-pointer">
+                <div class="rounded-xl overflow-hidden aspect-[3/4] bg-gray-50">
+                    <img src="4496bba6-6283-456e-983b-a19cf2bb14a4.JPG" alt="License 1" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div onclick="openLightbox('bb802a7a-9553-4975-b3b3-04db9661213c.JPG')" class="bg-white p-3 rounded-2xl shadow-md border border-gray-100 hover:scale-102 transition duration-300 cursor-pointer">
+                <div class="rounded-xl overflow-hidden aspect-[3/4] bg-gray-50">
+                    <img src="bb802a7a-9553-4975-b3b3-04db9661213c.JPG" alt="License 2" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div onclick="openLightbox('4496bba6-6283-456e-983b-a19cf2bb14a4 (1).JPG')" class="bg-white p-3 rounded-2xl shadow-md border border-gray-100 hover:scale-102 transition duration-300 cursor-pointer">
+                <div class="rounded-xl overflow-hidden aspect-[3/4] bg-gray-50">
+                    <img src="4496bba6-6283-456e-983b-a19cf2bb14a4 (1).JPG" alt="License 3" class="w-full h-full object-cover">
+                </div>
             </div>
         </div>
     </section>
@@ -215,13 +218,13 @@
                         <span id="time-text-ru" class="lang-block">Каждый день: 09:00 - 21:00</span>
                         <span id="time-text-en" class="lang-block">Every day: 09:00 - 21:00</span>
                     </p>
-                    <p>📞 <strong>Phone:</strong> <a href="tel:+3744858900" class="hover:text-[#6CB2A4] transition font-bold text-gray-900">+374 (44) 85-89-00</a></p>
+                    <p>📞 <strong>Phone:</strong> <a href="tel:+37444858900" class="hover:text-[#6CB2A4] transition font-bold text-gray-900">+374 (44) 85-89-00</a></p>
                     <p>📲 <strong>WhatsApp:</strong> <a href="https://wa.me/37444858900" target="_blank" class="text-green-600 hover:underline font-bold transition">Написать нам в чат</a></p>
                 </div>
             </div>
             
             <div class="w-full h-80 rounded-[2rem] overflow-hidden shadow-md border border-gray-100 bg-gray-200">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.784403378512!2d44.49622937661559!3d40.19163297147775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd1687ea83bb%3A0x67399fcb6bb291a1!2s77%20Marshal%20Baghramyan%20Ave%2C%20Yerevan!5e0!3m2!1sen!2sam!4v1716820000000!5m2!1sen!2sam" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://maps.google.com/maps?q=%D4%B2%D5%A1%D5%B2%D6%80%D5%A1%D5%B4%D5%B5%D5%A1%D5%B6%2077&t=&z=15&ie=UTF-8&iwloc=&output=embed" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -231,20 +234,15 @@
     </footer>
 
     <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
-        <div onclick="closeModal()" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div onclick="closeModal()" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
         
-        <div class="relative bg-white rounded-[2rem] w-full max-w-md p-6 sm:p-8 shadow-2xl border border-gray-100 transform transition-all scale-100 z-10">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition text-xl p-2 cursor-pointer">&times;</button>
+        <div class="relative bg-white rounded-[2rem] w-full max-w-md p-6 sm:p-8 shadow-2xl border border-gray-100 z-10">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition text-2xl p-2 cursor-pointer">&times;</button>
             
             <div class="text-center space-y-2 mb-6">
                 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F8F7] text-[#6CB2A4] text-xl font-bold mb-2">✦</div>
-                <h3 class="text-xl font-bold text-gray-900 lang-block lang-active" id="modal-title-hy">Ամրագրել այցելություն</h3>
-                <h3 class="text-xl font-bold text-gray-900 lang-block" id="modal-title-ru">Записаться на прием</h3>
-                <h3 class="text-xl font-bold text-gray-900 lang-block" id="modal-title-en">Book an Appointment</h3>
-                
-                <p class="text-sm text-gray-500 lang-block lang-active" id="modal-desc-hy">Ընտրեք Ձեզ հարմար տարբերակը կապ հաստատելու համար</p>
-                <p class="text-sm text-gray-500 lang-block" id="modal-desc-ru">Выберите удобный способ для связи с нами</p>
-                <p class="text-sm text-gray-500 lang-block" id="modal-desc-en">Choose a convenient way to contact us</p>
+                <h3 id="m-title" class="text-xl font-bold text-gray-900"></h3>
+                <p id="m-desc" class="text-sm text-gray-500"></p>
             </div>
             
             <div class="space-y-3">
@@ -256,12 +254,10 @@
                     <span class="text-gray-400 group-hover:translate-x-1 transition">→</span>
                 </a>
                 
-                <a href="https://tel:+37444858900" class="flex items-center justify-between p-4 bg-[#317682]/10 hover:bg-[#317682]/20 text-gray-900 font-semibold rounded-2xl transition border border-[#317682]/20 group">
+                <a href="tel:+37444858900" class="flex items-center justify-between p-4 bg-[#317682]/10 hover:bg-[#317682]/20 text-gray-900 font-semibold rounded-2xl transition border border-[#317682]/20 group">
                     <div class="flex items-center gap-3">
                         <span class="w-8 h-8 rounded-full bg-[#317682] flex items-center justify-center text-white text-sm">📞</span>
-                        <span id="modal-btn-call-hy" class="lang-block lang-active">Զանգահարել</span>
-                        <span id="modal-btn-call-ru" class="lang-block">Позвонить</span>
-                        <span id="modal-btn-call-en" class="lang-block">Call Us</span>
+                        <span id="m-call-text"></span>
                     </div>
                     <span class="text-gray-400 group-hover:translate-x-1 transition">→</span>
                 </a>
@@ -269,72 +265,101 @@
         </div>
     </div>
 
+    <div id="service-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div onclick="closeServiceModal()" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-[2rem] w-full max-w-md p-6 sm:p-8 shadow-2xl border border-gray-100 z-10 animate-fade-in">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition text-2xl p-2 cursor-pointer">&times;</button>
+            
+            <div class="space-y-4">
+                <div class="inline-block bg-[#6CB2A4]/10 text-[#6CB2A4] text-xs font-bold px-3 py-1 rounded-full">Info</div>
+                <h3 id="service-modal-title" class="text-xl font-bold text-gray-900"></h3>
+                <p id="service-modal-desc" class="text-gray-600 text-sm leading-relaxed pt-2 border-t border-gray-100"></p>
+                
+                <div class="pt-4">
+                    <button onclick="closeServiceModal(); openModal();" class="w-full py-3 bg-[#6CB2A4] text-white font-medium rounded-xl hover:bg-[#599A8D] transition shadow-sm text-sm cursor-pointer" id="service-modal-btn">
+                        Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <button class="absolute top-4 right-4 text-white text-3xl p-4">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged License" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain">
+    </div>
+
     <script>
-        // Данные прайс-листа полностью соответствуют картинке
+        let currentLang = 'hy';
+
+        // База данных услуг с ценами и описаниями на трех языках
         const prices = {
             hy: [
-                { name: "Ատամնաքարերի մաքրում և սպիտակեցում", price: "20.000 - 35.000 ֏" },
-                { name: "Պլոմբավորում բարձրակարգ կոմպոզիտով (Լուսային)", price: "15.000 - 40.000 ֏" },
-                { name: "Արմատախողովակների բուժում / վերաբուժում (1 խող. համար)", price: "10.000 - 30.000 ֏" },
-                { name: "Ատամի հեռացում", price: "10.000 - 35.000 ֏" },
-                { name: "Շապիկներ", price: "45.000 - 120.000 ֏" },
-                { name: "Վինիրներ", price: "30.000 - 120.000 ֏" },
-                { name: "Պրոթեզներ", price: "65.000 - 300.000 ֏" },
-                { name: "Լուսային սպիտակեցում", price: "90.000 - 150.000 ֏" },
-                { name: "Իմպլանտացիա", price: "120.000 - 280.000 ֏" }
+                { name: "Ատամնաքարերի մաքրում և սպիտակեցում", price: "20.000 - 35.000 ֏", desc: "Ատամնաքարերի և փառի պրոֆեսիոնալ հեռացում ուլտրաձայնային և AirFlow մեթոդով, որին հաջորդում է փայլեցումը բնական փայլի համար:" },
+                { name: "Պլոմբավորում բարձրակարգ կոմպոզիտով (Լուսային)", price: "15.000 - 40.000 ֏", desc: "Ատամի անատոմիական ձևի և ֆունկցիայի վերականգնում բարձրակարգ լուսային կոմպոզիտային նյութերով՝ երկարակեցության ապահովմամբ:" },
+                { name: "Արմատախողովակների բուժում / վերաբուժում (1 խող. համար)", price: "10.000 - 30.000 ֏", desc: "Բարդ բորբոքումների բուժում, խողովակների մանրակրկիտ մաքրում, ախտահանում և հերմետիկ լիցքավորում:" },
+                { name: "Ատամի հեռացում", price: "10.000 - 35.000 ֏", desc: "Ցանկացած բարդության ատամների անցավ հեռացում (ներառյալ իմաստության ատամները)՝ կիրառելով որակյալ և անվտանգ անզգայացում:" },
+                { name: "Շապիկներ", price: "45.000 - 120.000 ֏", desc: "Ատամների ամրության և էսթետիկայի վերականգնում մետաղակերամիկական կամ բարձրակարգ ու դիմացկուն ցիրկոնիումե շապիկներով:" },
+                { name: "Վինիրներ", price: "30.000 - 120.000 ֏", desc: "Բարակ կերամիկական թիթեղներ (վինիրներ)՝ կատարյալ հոլիվուդյան ժպիտ ստանալու, ատամների ձևն ու գույնը շտկելու համար:" },
+                { name: "Պրոթեզներ", price: "65.000 - 300.000 ֏", desc: "Բացակայող ատամների վերականգնում շարժական, մասնակի կամ ամբողջական բարձրորակ կոնստրուկցիաների միջոցով:" },
+                { name: "Լուսային սպիտակեցում", price: "90.000 - 150.000 ֏", desc: "Ատամների էմալի անվտանգ գունաբացում մի քանի երանգով՝ ժամանակակից լամպերի և պրոֆեսիոնալ պաշտպանիչ ժելերի կիրառմամբ:" },
+                { name: "Իմպլանտացիա", price: "120.000 - 280.000 ֏", desc: "Բացակայող ատամների արմատների փոխարինում պրեմիում դասի տիտանե իմպլանտներով (ներառյալ Straumann Group)՝ ցմահ երաշխիքով:" }
             ],
             ru: [
-                { name: "Чистка и отбеливание зубов", price: "20.000 - 35.000 ֏" },
-                { name: "Пломбирование качественным композитом (Световая)", price: "15.000 - 40.000 ֏" },
-                { name: "Лечение / перелечивание каналов (за 1 канал)", price: "10.000 - 30.000 ֏" },
-                { name: "Удаление зуба", price: "10.000 - 35.000 ֏" },
-                { name: "Коронки", price: "45.000 - 120.000 ֏" },
-                { name: "Виниры", price: "30.000 - 120.000 ֏" },
-                { name: "Протезы", price: "65.000 - 300.000 ֏" },
-                { name: "Световое отбеливание", price: "90.000 - 150.000 ֏" },
-                { name: "Имплантация", price: "120.000 - 280.000 ֏" }
+                { name: "Чистка и отбеливание зубов", price: "20.000 - 35.000 ֏", desc: "Профессиональное удаление зубного камня и налета ультразвуком и методом AirFlow с последующей полировкой для естественного блеска." },
+                { name: "Пломбирование качественным композитом (Световая)", price: "15.000 - 40.000 ֏", desc: "Восстановление анатомической формы и функции зуба с использованием современных светоотверждаемых материалов премиум-класса." },
+                { name: "Лечение / перелечивание каналов (за 1 канал)", price: "10.000 - 30.000 ֏", desc: "Лечение воспалений нерва, тщательная механическая очистка, антисептическая обработка и надежное герметичное пломбирование каналов." },
+                { name: "Удаление зуба", price: "10.000 - 35.000 ֏", desc: "Безболезненное удаление зубов любой сложности (включая ретинированные зубы мудрости) с использованием безопасной локальной анестезии." },
+                { name: "Коронки", price: "45.000 - 120.000 ֏", desc: "Восстановление прочности и эстетики сильно разрушенных зубов с помощью долговечных металлокерамических или диоксид-циркониевых коронок." },
+                { name: "Виниры", price: "30.000 - 120.000 ֏", desc: "Ультратонкие керамические накладки для создания идеальной улыбки, исправления формы, маскировки сколов и изменения цвета зубов." },
+                { name: "Протезы", price: "65.000 - 300.000 ֏", desc: "Восстановление жевательной функции при частичной или полной потере зубов с помощью легких и комфортных съемных протезов." },
+                { name: "Световое отбеливание", price: "90.000 - 150.000 ֏", desc: "Безопасное кабинетное осветление эмали зубов на несколько тонов с использованием щадящих оригинальных гелей и световой лампы." },
+                { name: "Имплантация", price: "120.000 - 280.000 ֏", desc: "Восстановление зубов от корня с использованием надежных титановых имплантатов ведущих мировых брендов (включая Straumann Group)." }
             ],
             en: [
-                { name: "Dental Scaling and Whitening", price: "20.000 - 35.000 ֏" },
-                { name: "High-quality Composite Filling (Light-cured)", price: "15.000 - 40.000 ֏" },
-                { name: "Root Canal Treatment / Retreatment (per canal)", price: "10.000 - 30.000 ֏" },
-                { name: "Tooth Extraction", price: "10.000 - 35.000 ֏" },
-                { name: "Dental Crowns", price: "45.000 - 120.000 ֏" },
-                { name: "Porcelain Veneers", price: "30.000 - 120.000 ֏" },
-                { name: "Dentures", price: "65.000 - 300.000 ֏" },
-                { name: "Light-cured Whitening", price: "90.000 - 150.000 ֏" },
-                { name: "Dental Implants", price: "120.000 - 280.000 ֏" }
+                { name: "Dental Scaling and Whitening", price: "20.000 - 35.000 ֏", desc: "Professional removal of dental plaque and tartar using advanced ultrasound and AirFlow methods, followed by teeth polishing." },
+                { name: "High-quality Composite Filling (Light-cured)", price: "15.000 - 40.000 ֏", desc: "Restoration of the tooth's natural anatomical shape and function using premium light-cured composite materials." },
+                { name: "Root Canal Treatment / Retreatment (per canal)", price: "10.000 - 30.000 ֏", desc: "Treatment of complex root canal internal infections, including thorough cleaning, advanced disinfection, and tight sealing." },
+                { name: "Tooth Extraction", price: "10.000 - 35.000 ֏", desc: "Painless removal of non-restorable teeth of any complexity (including wisdom teeth) using safe and powerful local anesthesia." },
+                { name: "Dental Crowns", price: "45.000 - 120.000 ֏", desc: "Full strength and structural restoration of weak teeth using highly aesthetic metal-ceramic or premium solid zirconia crowns." },
+                { name: "Porcelain Veneers", price: "30.000 - 120.000 ֏", desc: "Ultrathin custom ceramic shells bonded to the front of teeth to perfectly correct alignment, gaps, shapes, and color." },
+                { name: "Dentures", price: "65.000 - 300.000 ֏", desc: "Restoration of missing dental structures for partial or complete tooth loss using comfortable, elite removable dentures." },
+                { name: "Light-cured Whitening", price: "90.000 - 150.000 ֏", desc: "Safe in-office bleaching of tooth enamel by several shades using premium protective whitening gels and light activation." },
+                { name: "Dental Implants", price: "120.000 - 280.000 ֏", desc: "Premium root replacement using global top-tier titanium implants (including Straumann Group) ensuring lifetime bio-integration." }
             ]
         };
 
         const orthoPrices = {
             hy: [
-                { name: "Բրեկետներ", price: "480.000 - 950.000 ֏" },
-                { name: "Կապաններ", price: "30.000 - 50.000 ֏" }
+                { name: "Բրեկետներ", price: "480.000 - 950.000 ֏", desc: "Կծվածքի և ատամնաշարի անհարթությունների շտկում մետաղական, կերամիկական կամ սաֆիրե ժամանակակից համակարգերով:" },
+                { name: "Կապաններ", price: "30.000 - 50.000 ֏", desc: "Օրթոդոնտիկ բուժման արդյունքի պահպանում թափանցիկ անտեսանելի կապանների (ռետեյներների) միջոցով:" }
             ],
             ru: [
-                { name: "Брекеты", price: "480.000 - 950.000 ֏" },
-                { name: "Капы (ретейнеры)", price: "30.000 - 50.000 ֏" }
+                { name: "Брекеты", price: "480.000 - 950.000 ֏", desc: "Исправление прикуса и выравнивание зубного ряда с помощью современных металлических, керамических или сапфировых брекет-систем." },
+                { name: "Капы (ретейнеры)", price: "30.000 - 50.000 ֏", desc: "Прозрачные каппы для фиксации и сохранения достигнутого ровного результата после снятия брекетов." }
             ],
             en: [
-                { name: "Braces", price: "480.000 - 950.000 ֏" },
-                { name: "Retainers / Aligners", price: "30.000 - 50.000 ֏" }
+                { name: "Braces", price: "480.000 - 950.000 ֏", desc: "Bite correction and dental arch alignment utilizing state-of-the-art metal, ceramic, or discrete sapphire braces." },
+                { name: "Retainers / Aligners", price: "30.000 - 50.000 ֏", desc: "Stabilization and preservation of your perfectly corrected alignment using crystal-clear comfortable retainers." }
             ]
         };
 
-        const orthoTitles = {
-            hy: "ՕՐԹՈԴՈՆՏԻԱ",
-            ru: "ОРТОДОНТИЯ",
-            en: "ORTHODONTICS"
-        };
-
+        const orthoTitles = { hy: "ՕՐԹՈԴՈՆՏԻԱ", ru: "ОРТОДОНТИЯ", en: "ORTHODONTICS" };
         const menuTranslations = {
             hy: { main: "Գլխավոր", team: "Բժիշկներ", services: "Գներ", docs: "Լիցենզիաներ", blog: "Ինստագրամ", contacts: "Կապ" },
             ru: { main: "Главная", team: "Команда", services: "Цены", docs: "Лицензии", blog: "Инстаграм", contacts: "Контакты" },
             en: { main: "Home", team: "Team", services: "Prices", docs: "Licenses", blog: "Instagram", contacts: "Contact" }
         };
 
+        const modalTranslations = {
+            hy: { title: "Ամրագրել այցելություն", desc: "Ընտրեք Ձեզ հարմար տարբերակը կապ հաստատելու համար", call: "Զանգահարել", moreBtn: "Ավելին", modalBook: "Ամրագրել" },
+            ru: { title: "Записаться на прием", desc: "Выберите удобный способ для связи с нами", call: "Позвонить", moreBtn: "Подробнее", modalBook: "Записаться" },
+            en: { title: "Book an Appointment", desc: "Choose a convenient way to contact us", call: "Call Us", moreBtn: "More Info", modalBook: "Book Now" }
+        };
+
+        // ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА
         function setLanguage(lang) {
+            currentLang = lang;
             document.querySelectorAll('.lang-block').forEach(el => el.style.display = 'none');
             
             document.getElementById(`hero-${lang}`).style.display = 'block';
@@ -353,7 +378,6 @@
             document.getElementById(`adr-text-${lang}`).style.display = 'inline';
             document.getElementById(`c-adr-${lang}`).style.display = 'inline';
             
-            // Обновляем заголовок ортодонтии
             document.getElementById('ortho-title').textContent = orthoTitles[lang];
 
             document.querySelectorAll('[data-lang]').forEach(el => {
@@ -361,30 +385,41 @@
                 el.textContent = menuTranslations[lang][key];
             });
 
-            // Рендер основных цен
+            // Рендер основных цен с кнопкой "Подробнее/Ավելին"
             const container = document.getElementById('price-list-container');
             container.innerHTML = '';
-            prices[lang].forEach(item => {
+            prices[lang].forEach((item, index) => {
                 container.innerHTML += `
-                    <div class="flex justify-between items-center py-2 border-b border-[#D5E5E2]/60 gap-4">
-                        <span class="font-medium text-gray-800 text-sm sm:text-base">${item.name}</span>
-                        <span class="font-bold text-gray-900 whitespace-nowrap text-sm sm:text-base">${item.price}</span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-[#D5E5E2]/60 gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="font-medium text-gray-800 text-sm sm:text-base">${item.name}</span>
+                            <button onclick="openServiceModal('main', ${index})" class="text-xs font-semibold text-[#6CB2A4] hover:text-[#599A8D] px-2 py-0.5 rounded-full bg-white/60 border border-[#6CB2A4]/30 transition cursor-pointer shrink-0">
+                                ${modalTranslations[lang].moreBtn}
+                            </button>
+                        </div>
+                        <span class="font-bold text-gray-900 whitespace-nowrap text-sm sm:text-base self-end sm:self-auto">${item.price}</span>
                     </div>
                 `;
             });
 
-            // Рендер цен ортодонтии
+            // Рендер ортодонтии
             const orthoContainer = document.getElementById('ortho-list-container');
             orthoContainer.innerHTML = '';
-            orthoPrices[lang].forEach(item => {
+            orthoPrices[lang].forEach((item, index) => {
                 orthoContainer.innerHTML += `
-                    <div class="flex justify-between items-center py-2 border-b border-[#D5E5E2]/60 gap-4">
-                        <span class="font-medium text-gray-800 text-sm sm:text-base">${item.name}</span>
-                        <span class="font-bold text-gray-900 whitespace-nowrap text-sm sm:text-base">${item.price}</span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 border-b border-[#D5E5E2]/60 gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="font-medium text-gray-800 text-sm sm:text-base">${item.name}</span>
+                            <button onclick="openServiceModal('ortho', ${index})" class="text-xs font-semibold text-[#6CB2A4] hover:text-[#599A8D] px-2 py-0.5 rounded-full bg-white/60 border border-[#6CB2A4]/30 transition cursor-pointer shrink-0">
+                                ${modalTranslations[lang].moreBtn}
+                            </button>
+                        </div>
+                        <span class="font-bold text-gray-900 whitespace-nowrap text-sm sm:text-base self-end sm:self-auto">${item.price}</span>
                     </div>
                 `;
             });
 
+            // Активные/пассивные кнопки языков
             ['hy', 'ru', 'en'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
                 if(l === lang) {
@@ -395,6 +430,61 @@
             });
         }
 
+        // МОДАЛЬНОЕ ОКНО ЗАПИСИ
+        function openModal() {
+            const modal = document.getElementById('booking-modal');
+            document.getElementById('m-title').textContent = modalTranslations[currentLang].title;
+            document.getElementById('m-desc').textContent = modalTranslations[currentLang].desc;
+            document.getElementById('m-call-text').textContent = modalTranslations[currentLang].call;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Запрет скролла
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; 
+        }
+
+        // МОДАЛЬНОЕ ОКНО ИНФОРМАЦИИ ОБ УСЛУГЕ
+        function openServiceModal(category, index) {
+            const data = category === 'main' ? prices[currentLang][index] : orthoPrices[currentLang][index];
+            document.getElementById('service-modal-title').textContent = data.name;
+            document.getElementById('service-modal-desc').textContent = data.desc;
+            document.getElementById('service-modal-btn').textContent = modalTranslations[currentLang].modalBook;
+            
+            const sModal = document.getElementById('service-modal');
+            sModal.classList.remove('hidden');
+            sModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeServiceModal() {
+            const sModal = document.getElementById('service-modal');
+            sModal.classList.add('hidden');
+            sModal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // КЛИКАБЕЛЬНЫЕ ЛИЦЕНЗИИ (LIGHTBOX)
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+        }
+
+        // Старт инициализации страницы
         setLanguage('hy');
     </script>
 </body>
